@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-playfair: 'Playfair Display', Georgia, serif;
+  --font-jakarta: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --brand-red: #DD3724;
+  --truffle: #1E100D;
+  --cream: #FDF8F2;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-jakarta);
+  background-color: #FDF8F2;
+  color: #1E100D;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #FDF8F2;
+  color: #1E100D;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDF8F2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E5A39B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #DD3724;
+}
+
+/* Glassmorphism Presets */
+.glass-nav {
+  background: rgba(253, 248, 242, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(221, 55, 36, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(221, 55, 36, 0.1);
+}
+
+.glass-card-dark {
+  background: rgba(30, 16, 13, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(224, 142, 121, 0.2);
+}
+
+/* Subtle micro-grain overlay effect */
+.bg-grain {
+  background-image: radial-gradient(rgba(221, 55, 36, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Shimmer animation for luxury gold accent */
+@keyframes goldShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.gold-gradient-text {
+  background: linear-gradient(90deg, #1E100D 0%, #DD3724 40%, #E5A338 60%, #1E100D 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
